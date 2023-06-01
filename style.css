@@ -1,0 +1,59 @@
+header {
+    background-color: #5c5c5c;
+    height: 75px;
+}
+article {
+    background-color: white;
+}
+footer {
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+.logo {
+    margin-left: 105px;
+    width: 300px;
+    margin-top: 15px;
+    position: absolute;
+}
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    header {
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        width: 300px;
+        margin-left: 0px;
+    }
+    nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }   
+    
+}
+button {
+    background-color: whitesmoke;
+    border: 0px;
+    font-family: 'buttonfontfamily';
+    font-size: 45px;
+    transition: 0.4s;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    background-color: #5c5c5c;
+}
+.news {
+    border: 1px black solid;
+    width: 600px;
+    
+    height: 1000px;
+}

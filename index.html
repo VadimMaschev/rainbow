@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale= 1">
+		<title>Радуга - карандашная фабрика</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			body {
+				width: auto;
+			}
+			article {
+				height: 1000px;
+			}
+			button {
+    			background-color: rgb(0, 0, 0);
+				color: white;
+    			border: 0px;
+    			font-family: 'buttonfontfamily';
+			}
+			.center {
+				display: flex;
+				justify-content: center;
+			}
+			h1 {
+				font-family: 'h1fontfamily';
+			}
+			.now {
+				background-color: whitesmoke;
+				color: black;
+    			border: 0px;
+    			font-family: 'buttonfontfamily';
+			}
+			@font-face {
+				font-family: 'h1fontfamily';
+				src: url(fonts/Unbounded-ExtraBold.ttf);
+			}
+			@font-face {
+				font-family: 'buttonfontfamily';
+				src: url(fonts/Unbounded-Medium.ttf);
+			}
+			.blue {
+				background-color: rgb(85, 168, 168);
+				height: 500px;
+			}
+			.img {
+				width: 1000px;
+				margin-top: 30px;
+				margin-left: 30px;
+				margin-bottom: 30px;
+			}
+			.ph {
+				font-family: 'Unbounded-Black';
+				font-size: larger;
+				transform: translate(600px, -150px);
+			}
+			.phh {
+				font-family: 'UL';
+				font-size: larger;
+				transform: translate(650px, -150px);
+				width: 600px;
+				margin-right: 1px;
+			}
+			@font-face {
+				font-family: 'UL';
+				src: url("fonts/Unbounded-Light.ttf");
+			}
+			@font-face {
+				font-family: 'Unbounded-Black';
+				src: url('fonts/Unbounded-Black.ttf');
+			}
+			.imgg {
+				width: 700px;
+				transform: translate(1100px, -550px);
+			}
+			.imggg {
+				width: 400px;
+				transform: translate(-150px, -800px);
+			}
+			.products {
+				display: flex;
+				flex-flow: row wrap;
+			}
+			.bold {
+				font-family: 'h1fontfamily';
+				font-size: xx-large;
+			}
+			
+			.UL {
+				font-family: 'UL';
+				margin-left: 15px;
+				font-size: x-large;
+			}
+			.news-header {
+				border: 1px black solid;
+				width: 600px;
+				height: 50px;
+				transform: translate(1900px, 300px);
+				margin-bottom: -40px;
+				background-color: #12BEC9;
+				margin-top: -306px;
+			}
+			/* Статьи, .about */
+			.one {
+				margin-left: 10px;
+			}
+			.UL-basic {
+				font-family: 'UL';
+			}
+			.UL-underline {
+				font-family: 'UL';
+				text-decoration: underline;
+			}
+			.news-image-first {
+				margin-left: 20px;
+				box-shadow: grey 10px 10px 5px;
+			}
+			.skidka-p-one {
+				font-family: 'h1fontfamily';
+				font-size: larger;
+				margin-left: 20px;
+			}
+			.strikedtext-p-one {
+				text-decoration: line-through;
+				font-size: x-small;
+				opacity: 0.6;
+			}
+			.new-p-one {
+				font-size: xx-large;
+			}
+			.news-button {
+				background-color: white;
+				color: black;
+				font-size: larger;
+				margin-left: 20px;
+			}
+			.news-i-one {
+				color: white;
+			}
+			.news-button:hover {
+				background-color: rgb(97, 137, 172);
+			}
+			.img-div-one {
+				width: 300px;
+				transform: translate(1200px, -200px);
+			}
+			@media screen and (max-width: 1920px) and (min-width: 1080px) {
+    			button {font-size: 30px;}
+				.img {width: 1000px;}
+				.imgg {transform: translate(800px, -500px);}
+				.news {transform: translate(1465px, -1480px); background-color: white;}
+				.news-header {transform: translate(1465px, -1530px);}
+				
+			}
+			/* товары */
+			.tovari {
+				margin-top: -50px;
+			}
+			.tovari-center {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: wrap column;
+			}
+			
+			.tovari-p-first {
+				font-family: 'h1fontfamily';
+				font-size: 25px;
+			}
+			.tovari-img {
+				width: 800px;
+			}
+			.tovari-p-second {
+				font-family: 'UL';
+				font-size: 15px;
+			}
+			/* отзывы */
+			.reviews {
+				display: flex;
+				flex-direction: row;
+				margin-top: 20px;
+			}
+			.reviews-div-one {
+				border: 1px black solid;
+				border-radius: 25px;
+				width: 500px;
+			}
+			.reviews-p-first {
+				margin-top: 5px;
+				margin-left: 15px;
+				font-family: 'h1fontfamily';
+			}
+			.reviews-p-second {
+				margin-top: 5px;
+				margin-left: 15px;
+				font-family: 'UL';
+			}
+			.reviews-div-second {
+				margin-left: 10px;
+				border: 1px black solid;
+				border-radius: 25px;
+				width: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="логотип.png" class="logo"><br>
+		</header>
+		<article>
+			<nav><button onclick="gs()" class="now">Главная страница</button><button onclick="ph()">Статьи</button><button onclick="ratings()">Отзывы</button><button onclick="contact()">Связь</button></nav>
+			<div class="center">
+			<h1>Добро пожаловать!</h1>
+			</div>
+			<div class="blue">
+				<img src="карандаши.png" class="img">
+				<p class="ph">Делаем карандаши на заказ!</p>
+				<p class="phh">Дешево, качественно, быстро</p>
+				<img src="карандашики.png" class="imgg">
+				<img src="https://www.toybytoy.com/file/0024/600/6574.jpg" class="imggg">
+			</div>
+			<div class="center">
+				<p class="bold">О нас</p>
+			</div>
+			<div class="about">
+				<div class="one">
+					<p class="UL-basic">Радуга - компания, которая производит карандаши на любой вкус и цвет.</p>
+					<p class="UL-underline">Наш ассортимент не разнообразен, но имеет небольшое количество конфигураций.</p>
+					<img src="https://images.unsplash.com/photo-1581972472593-fe1e492d5c96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1101&q=80" class="img-div-one">
+				</div>
+			</div>
+			<div class="tovari">
+				<div class="tovari-center">
+					<p class="tovari-p-first">Товары</p>
+					<img src="vidi-karandashei.png" class="tovari-img">
+					<p class="tovari-p-second">А еще можно выбрать между разноцветным или простым карандашом</p>
+					<button class="tovari-order" onclick="order()">Заказать!</button>
+				</div>
+			</div>
+			<div class="reviews">
+				<div class="reviews-div-one">
+					<p class="reviews-p-first">Александр</p>
+					<p class="reviews-p-second">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="reviews-div-second">
+					<p class="reviews-p-first">Мария</p>
+					<p class="reviews-p-second">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<img src="love.png" width="200px" style="margin-left: 100px;">
+			</div>
+			<div class="news-header">
+			</div>
+			<div class="news">
+				<p class="UL">Популярные статьи</p>
+				<hr>
+				<img src="https://images.unsplash.com/photo-1593559962863-b47198dfd889?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" width="400px" class="news-image-first">
+				<p class="skidka-p-one">Один карандаш <span class="strikedtext-p-one">99</span> <span class="new-p-one">50 руб</span></p>
+				<button onclick="conctact()" class="news-button">Свяжитесь, что бы купить новые карандаши!<br><i class="news-i-one">И получить большие скидки!</i></button>
+				<hr>
+			</div>
+		</article>
+		<script>
+
+			function order() {
+				window.open("contact.html");
+			}
+		</script>
+	</body>
+</html>
